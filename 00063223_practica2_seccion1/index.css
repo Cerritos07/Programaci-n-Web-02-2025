@@ -1,0 +1,121 @@
+/* Universal*/
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin-block: 1.5rem;
+}
+
+.class{
+    text-decoration: underlink;
+}
+
+#id{
+    font-family: monospace;
+}
+
+li:has(a){
+    display:flex;
+}
+/*--------------------------------------*/
+
+header h1{
+
+}
+
+header >h1{
+
+}
+
+h1 ~p{
+
+}
+
+h1 +p{
+
+}
+
+h1, p{
+
+}
+
+/*----------------------------------*/
+.container {
+    display: flex; /* o inline-flex si quieres que ocupe menos espacio */
+    flex-direction: "column"; /* Cambiar a row para fila */
+    flex-wrap: wrap; /* Si hay muchos elementos, se bajan a otra línea */
+    display: flex;
+    gap: 10px; /* Espaciado entre filas y columnas */
+    gap: 10px 20px;
+    row-gap: 10px; /* Espaciado solo entre filas */
+    column-gap: 20px; /* Espaciado solo entre columnas */
+}
+
+.item {
+    flex-grow: 1; /* Hace que cada ítem crezca con el mismo espacio */
+}
+
+.item-2 {
+    flex-grow: 2; /* Este ítem ocupa el doble de espacio que los demás */
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+.container{
+    display: grid; 
+    grid-template-columns:
+        1fr 1fr
+        minmax(10px, 1fr) 3fr
+        repeat(5, 1fr)
+        50px auto 100px 1fr;
+
+    /* e.g.
+    grid-template-rows:
+    min-content 1fr min-content:
+    100px 1fr max-content 
+    */
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 50px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* más separación entre bloques */
+  margin-top: 20px;
+}
+
+.bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bloque-titulo {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.bloque-imagen img {
+  width: 400px; /* antes 220px */
+  height: auto;
+  border-radius: 8px;
+}
+
+.bloque-texto {
+  margin-top: 12px;
+  font-size: 15px;
+}
